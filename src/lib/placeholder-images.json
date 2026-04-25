@@ -1,0 +1,124 @@
+{
+  "placeholderImages": [
+    {
+      "id": "canvas-1",
+      "description": "Abstract art with blue and gold",
+      "imageUrl": "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=1080",
+      "imageHint": "abstract art"
+    },
+    {
+      "id": "canvas-2",
+      "description": "Cityscape at night",
+      "imageUrl": "https://images.unsplash.com/photo-1588312744377-2adfb7b8578a?w=1080",
+      "imageHint": "city night"
+    },
+    {
+      "id": "canvas-3",
+      "description": "Minimalist interior design",
+      "imageUrl": "https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?w=1080",
+      "imageHint": "minimalist interior"
+    },
+    {
+      "id": "canvas-4",
+      "description": "Forest path in autumn",
+      "imageUrl": "https://images.unsplash.com/photo-1507371341162-763b5e419408?w=1080",
+      "imageHint": "autumn forest"
+    },
+    {
+      "id": "canvas-5",
+      "description": "Close-up of a vintage camera",
+      "imageUrl": "https://images.unsplash.com/photo-1516961642265-531546e84af2?w=1080",
+      "imageHint": "vintage camera"
+    },
+    {
+      "id": "canvas-6",
+      "description": "Ocean waves crashing on a shore",
+      "imageUrl": "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=1080",
+      "imageHint": "ocean waves"
+    },
+    {
+      "id": "canvas-7",
+      "description": "A stack of old books",
+      "imageUrl": "https://images.unsplash.com/photo-1515325595179-59cd5262ca53?w=1080",
+      "imageHint": "old books"
+    },
+    {
+      "id": "canvas-8",
+      "description": "A person hiking on a mountain",
+      "imageUrl": "https://images.unsplash.com/photo-1574616054483-24b4a33a3bea?w=1080",
+      "imageHint": "mountain hiking"
+    },
+    {
+      "id": "canvas-9",
+      "description": "A neon sign in a dark alley",
+      "imageUrl": "https://images.unsplash.com/photo-1617575521317-d2974f3b56d2?w=1080",
+      "imageHint": "neon sign"
+    },
+    {
+      "id": "canvas-10",
+      "description": "A detailed architectural drawing",
+      "imageUrl": "https://images.unsplash.com/photo-1619759247142-b457e9e6b634?w=1080",
+      "imageHint": "architectural drawing"
+    },
+    {
+      "id": "canvas-11",
+      "description": "A cup of coffee with latte art",
+      "imageUrl": "https://images.unsplash.com/photo-1593443320739-77f74939d0da?w=1080",
+      "imageHint": "latte art"
+    },
+    {
+      "id": "canvas-12",
+      "description": "A portrait with interesting lighting",
+      "imageUrl": "https://images.unsplash.com/photo-1670879806923-3ca6e5b7c5b4?w=1080",
+      "imageHint": "portrait lighting"
+    },
+    {
+      "id": "canvas-13",
+      "description": "A musician playing a guitar",
+      "imageUrl": "https://images.unsplash.com/photo-1624738610609-ee35c1b6db9b?w=1080",
+      "imageHint": "guitar musician"
+    },
+    {
+      "id": "canvas-14",
+      "description": "A colorful street market",
+      "imageUrl": "https://images.unsplash.com/photo-1567763080747-35963b554bbd?w=1080",
+      "imageHint": "street market"
+    },
+    {
+      "id": "canvas-15",
+      "description": "Futuristic cityscape concept art",
+      "imageUrl": "https://images.unsplash.com/photo-1683321201755-67c6f575a3bc?w=1080",
+      "imageHint": "futuristic cityscape"
+    },
+    {
+      "id": "canvas-16",
+      "description": "A field of wildflowers",
+      "imageUrl": "https://images.unsplash.com/photo-1533811097408-37b102ee4f2a?w=1080",
+      "imageHint": "wildflower field"
+    },
+    {
+      "id": "canvas-17",
+      "description": "A chef preparing a dish",
+      "imageUrl": "https://images.unsplash.com/photo-1577219492769-b63a779fac28?w=1080",
+      "imageHint": "chef cooking"
+    },
+    {
+      "id": "canvas-18",
+      "description": "A vintage car on a scenic road",
+      "imageUrl": "https://images.unsplash.com/photo-1603039548092-fff996c2441c?w=1080",
+      "imageHint": "vintage car"
+    },
+    {
+      "id": "canvas-19",
+      "description": "A galaxy with stars and nebulae",
+      "imageUrl": "https://images.unsplash.com/photo-1628317887507-3c3e2ddd3281?w=1080",
+      "imageHint": "galaxy nebula"
+    },
+    {
+      "id": "canvas-20",
+      "description": "A person painting on a canvas",
+      "imageUrl": "https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?w=1080",
+      "imageHint": "artist painting"
+    }
+  ]
+}

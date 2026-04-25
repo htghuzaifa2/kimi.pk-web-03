@@ -1,0 +1,22 @@
+{
+  "name": "kimi.pk",
+  "short_name": "kimi.pk",
+  "description": "Pakistan's Premium Beauty & Cosmetics Store",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#E11D73",
+  "icons": [
+    {
+      "src": "https://i.postimg.cc/k5FPSpFx/kimi-pk-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://i.postimg.cc/k5FPSpFx/kimi-pk-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

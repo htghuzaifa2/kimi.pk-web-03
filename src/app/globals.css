@@ -1,0 +1,287 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 330 20% 98%;
+    --foreground: 330 30% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 330 30% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 330 30% 10%;
+    --primary: 340 82% 52%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 330 20% 96%;
+    --secondary-foreground: 330 30% 10%;
+    --muted: 330 15% 96%;
+    --muted-foreground: 330 10% 45%;
+    --accent: 340 82% 60%;
+    /* Rose/Pink accent for beauty theme */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 330 15% 90%;
+    --input: 330 15% 90%;
+    --ring: 340 82% 52%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 330 15% 4%;
+    --foreground: 330 15% 98%;
+    --card: 330 12% 7%;
+    --card-foreground: 330 15% 98%;
+    --popover: 330 12% 7%;
+    --popover-foreground: 330 15% 98%;
+    --primary: 340 82% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 330 15% 15%;
+    --secondary-foreground: 330 15% 98%;
+    --muted: 330 10% 15%;
+    --muted-foreground: 330 10% 64%;
+    --accent: 340 75% 62%;
+    /* Rose/Pink accent for beauty theme */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 330 12% 16%;
+    --input: 330 12% 16%;
+    --ring: 340 82% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground overflow-x-hidden;
+  }
+
+  /* Custom Scrollbar Styles */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/50 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/70;
+  }
+
+  @keyframes text-gradient {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes gradient-x {
+
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+}
+
+@layer utilities {
+  .bg-grid-white-500\/10 {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out forwards;
+  }
+
+  .animate-text-gradient {
+    animation: text-gradient 3s linear infinite;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s linear infinite;
+  }
+
+  .animate-gradient-x {
+    animation: gradient-x 3s ease infinite;
+  }
+
+  /* From Uiverse.io by T-R-C - A cool magnetic button with blob effect */
+  .fancy-btn {
+    --b: 3px;
+    /* border thickness */
+    --s: .45em;
+    /* size of the corner */
+    --c: hsl(var(--primary));
+
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--c);
+    --_p: var(--s);
+    background: transparent;
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 16px;
+
+    border: 2px solid var(--c);
+
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
+    position: relative;
+    overflow: hidden;
+  }
+
+  .fancy-btn:hover,
+  .fancy-btn:focus-visible {
+    --_p: 0px;
+    outline-color: var(--c);
+    outline-offset: .05em;
+    border-color: transparent;
+  }
+
+  .fancy-btn:active {
+    background: var(--c);
+    color: hsl(var(--primary-foreground));
+  }
+
+
+  .fancy-btn .text {
+    font-family: var(--font-headline);
+    position: relative;
+    z-index: 2;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    transition: color 0.4s ease-in-out;
+  }
+
+  .fancy-btn:hover .text {
+    color: hsl(var(--primary-foreground));
+  }
+
+  .fancy-btn .blob {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: var(--c);
+    border-radius: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.4s ease-in-out;
+    pointer-events: none;
+  }
+
+  .fancy-btn:hover .blob {
+    transform: translate(-50%, -50%) scale(10);
+  }
+
+  /* Premium Blog FAQ Styles */
+  .blog-faq-container {
+    @apply space-y-4 my-8;
+  }
+
+  .blog-faq-item {
+    @apply bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden transition-all duration-300;
+  }
+
+  .blog-faq-item:hover {
+    @apply border-primary/30 shadow-md;
+  }
+
+  .blog-faq-summary {
+    @apply font-bold cursor-pointer p-4 list-none flex items-center justify-between text-slate-800 dark:text-slate-100;
+  }
+
+  .blog-faq-summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .blog-faq-summary::after {
+    content: '→';
+    @apply text-primary transition-transform duration-300;
+  }
+
+  .blog-faq-item[open] .blog-faq-summary::after {
+    transform: rotate(90deg);
+  }
+
+  .blog-faq-content {
+    @apply p-4 pt-0 text-slate-600 dark:text-slate-400 leading-relaxed;
+  }
+
+  /* Enhanced Blog Typography Overrides */
+  .prose p {
+    margin-bottom: 2rem !important;
+    line-height: 1.85 !important;
+    letter-spacing: -0.01em;
+    word-spacing: 0.05em;
+  }
+
+  .prose h2,
+  .prose h3 {
+    letter-spacing: -0.02em;
+    margin-top: 3rem !important;
+  }
+
+  .prose ul,
+  .prose ol {
+    margin-bottom: 2rem !important;
+  }
+
+  .prose li {
+    margin-bottom: 0.75rem !important;
+  }
+}
