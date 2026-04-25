@@ -4,7 +4,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 export default function Loading() {
   return (
     <div className="container mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-      <div className="grid grid-cols-1 xs:grid-cols-2 gap-8 lg:gap-12 items-start">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-12 items-start">
         <div className="space-y-4">
           <Skeleton className="aspect-square w-full" />
           <div className="flex justify-center gap-2">

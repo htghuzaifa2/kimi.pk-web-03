@@ -5,6 +5,9 @@ import { APP_NAME } from '@/lib/constants';
 export const metadata: Metadata = {
   title: 'Return & Refund Policy',
   description: `Read the official Return & Refund Policy for ${APP_NAME} to understand the conditions and process for returning a product.`,
+  alternates: {
+    canonical: `https://www.${APP_NAME}/return-policy/`,
+  },
 };
 
 export default function ReturnPolicyLayout({

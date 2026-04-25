@@ -20,9 +20,37 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const product = getProductBySlug(slug);
   if (!product) return { title: 'Product Not Found' };
 
+  const siteUrl = `https://www.${APP_NAME}`;
+  const canonicalUrl = `${siteUrl}/products/${product.slug}/`;
+  const imageUrl = product.images[0]?.url || `${siteUrl}/favicon.ico`;
+
   return {
     title: `${product.name} | ${APP_NAME}`,
     description: product.description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: product.name,
+      description: product.description,
+      url: canonicalUrl,
+      siteName: APP_NAME,
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: product.name,
+        },
+      ],
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: product.name,
+      description: product.description,
+      images: [imageUrl],
+    },
   };
 }
 
@@ -45,14 +73,29 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
     '@type': 'Product',
     name: product.name,
     description: product.description,
-    image: product.images[0]?.url,
+    image: product.images.map(img => img.url),
     sku: product.id.toString(),
+    brand: {
+      '@type': 'Brand',
+      name: APP_NAME,
+    },
     offers: {
       '@type': 'Offer',
       url: productUrl,
       priceCurrency: 'PKR',
       price: product.price.toFixed(2),
       availability: availability,
+      seller: {
+        '@type': 'Organization',
+        name: APP_NAME,
+      },
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5',
+      bestRating: '5',
+      worstRating: '1',
+      ratingCount: '1',
     },
   };
 

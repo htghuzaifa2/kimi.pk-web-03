@@ -51,7 +51,7 @@ export function ProductCard({ product }: ProductCardProps) {
             alt={images[currentImageIndex].altText}
             fill
             className="object-contain p-4 transition-transform duration-300 group-hover:scale-105"
-            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+            sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, (max-width: 1280px) 20vw, 16vw"
             loading="lazy"
             placeholder="blur"
             blurDataURL={BLUR_DATA_URL}

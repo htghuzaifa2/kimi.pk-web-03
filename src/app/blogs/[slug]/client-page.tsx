@@ -87,39 +87,8 @@ function SmartBackButton() {
 
 
 export function BlogPostClientPage({ post }: { post: BlogPostWithContent }) {
-    const siteUrl = `https://www.kimi.pk`; // Hardcoded for simplicity or use APP_NAME if exported
-    const jsonLd = {
-        '@context': 'https://schema.org',
-        '@type': 'BlogPosting',
-        headline: post.title,
-        description: post.description,
-        image: `${siteUrl}/images/blog-placeholder.jpg`,
-        author: {
-            '@type': 'Organization',
-            name: 'kimi.pk Team',
-            url: siteUrl,
-        },
-        publisher: {
-            '@type': 'Organization',
-            name: 'kimi.pk',
-            logo: {
-                '@type': 'ImageObject',
-                url: `${siteUrl}/logo.png`,
-            },
-        },
-        datePublished: new Date().toISOString(), // Fallback
-        mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': `${siteUrl}/blogs/${post.slug}`,
-        },
-    };
-
     return (
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-            />
 
             <TableOfContents />
             <article className="prose prose-lg dark:prose-invert mx-auto max-w-4xl 

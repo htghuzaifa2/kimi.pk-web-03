@@ -6,10 +6,13 @@ import Script from 'next/script';
 export const metadata: Metadata = {
   title: 'Developer Tools',
   description: `A collection of handy online tools for developers and designers, provided by ${APP_NAME}, to speed up your creative and development workflow.`,
+  alternates: {
+    canonical: `https://www.${APP_NAME}/tools/`,
+  },
   openGraph: {
     title: `Developer Tools | ${APP_NAME}`,
     description: `A collection of handy online tools for developers and designers, provided by ${APP_NAME}.`,
-    url: `https://www.${APP_NAME}/tools`,
+    url: `https://www.${APP_NAME}/tools/`,
   },
 };
 
