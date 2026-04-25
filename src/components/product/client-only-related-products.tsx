@@ -24,7 +24,7 @@ function shuffle(array: any[]) {
   return array;
 }
 
-const RECOMMENDATION_COUNT = 4;
+const RECOMMENDATION_COUNT = 11;
 
 export function ClientOnlyRelatedProducts() {
   const allProducts = getProducts();
