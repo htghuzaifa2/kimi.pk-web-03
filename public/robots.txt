@@ -2,3 +2,7 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.kimi.pk/sitemap.xml
+Sitemap: https://www.kimi.pk/products.xml/
+Sitemap: https://www.kimi.pk/blogs.xml/
+Sitemap: https://www.kimi.pk/tools.xml/
+Sitemap: https://www.kimi.pk/categories.xml/

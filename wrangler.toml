@@ -1,6 +1,4 @@
 name = "kimi-pk-web-v2"
 compatibility_date = "2025-01-01"
 compatibility_flags = ["nodejs_compat"]
-
-[assets]
-directory = ".vercel/output/static"
+pages_build_output_dir = ".vercel/output/static"

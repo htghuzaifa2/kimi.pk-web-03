@@ -151,7 +151,7 @@ export function Header() {
                     <SheetTitle className="text-left font-headline text-2xl">
                         {APP_NAME}
                     </SheetTitle>
-                    <SheetDescription className="sr-only">Navigation menu for {APP_NAME}</SheetDescription>
+                    <SheetDescription className="sr-only">Navigation menu for {APP_NAME} - Premium Cosmetics &amp; Beauty Store</SheetDescription>
                 </SheetHeader>
                 <ScrollArea className="h-[calc(100vh-80px)] pr-4">
                     <nav className="flex flex-col gap-4 mt-6">
